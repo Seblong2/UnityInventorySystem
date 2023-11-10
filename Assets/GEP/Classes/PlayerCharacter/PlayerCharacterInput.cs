@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerCharacterInput : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerCharacterInput : MonoBehaviour
     public Vector2 look;
     public bool jump;
     public bool sprint;
+    public bool openInventory;
 
     [Header("Movement Settings")]
     public bool analogMovement;
@@ -22,6 +24,7 @@ public class PlayerCharacterInput : MonoBehaviour
     {
         MoveInput(value.Get<Vector2>());
     }
+    
 
     public void OnLook(InputValue value)
     {
@@ -29,6 +32,10 @@ public class PlayerCharacterInput : MonoBehaviour
         {
             LookInput(value.Get<Vector2>());
         }
+    }
+    public void OnOpenInventory(InputValue value)
+    {
+        OpenInput(value.isPressed);
     }
 
     public void OnJump(InputValue value)
@@ -40,6 +47,7 @@ public class PlayerCharacterInput : MonoBehaviour
     {
         SprintInput(value.isPressed);
     }
+    
 
     public void MoveInput(Vector2 newMoveDirection)
     {
@@ -61,6 +69,13 @@ public class PlayerCharacterInput : MonoBehaviour
         sprint = newSprintState;
     }
 
+    public void OpenInput(bool newOpenState)
+    {
+        openInventory = newOpenState;
+    }
+
+    
+    
     private void OnApplicationFocus(bool hasFocus)
     {
         SetCursorState(cursorLocked);
