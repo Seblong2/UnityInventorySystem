@@ -5,21 +5,30 @@ using UnityEngine.InputSystem;
 
 public class InventoryScript : MonoBehaviour
 {
-    public InputAction openInventory;
+    InventoryAction InventoryInput;
 
+
+    private void Awake()
+    {
+        InventoryInput = new InventoryAction();
+    }
 
     private void OnEnable()
     {
-        openInventory.Enable();
-        openInventory
+        InventoryInput.Enable();
     }
 
     private void OnDisable()
     {
-        openInventory.Disable();
+        InventoryInput.Disable();
     }
 
-    private void ToggleUI()
+    private void Update()
+    {
+        NewInputSystem();
+    }
+
+    private void NewInputSystem()
     {
         
     }

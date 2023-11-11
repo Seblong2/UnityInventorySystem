@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4419d82f33d36e848b3ed5af4c8da37e
+guid: ada4475e81e3d4d489851b4d2ef16a11
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,6 +9,6 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 8404be70184654265930450def6a9037, type: 3}
   generateWrapperCode: 1
-  wrapperCodePath: Assets/GEP/InputSystem/PlayerActions.cs
+  wrapperCodePath: Assets/GEP/Classes/Inventory/InventoryAction.cs
   wrapperClassName: 
   wrapperCodeNamespace: 

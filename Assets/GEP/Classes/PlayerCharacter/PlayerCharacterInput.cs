@@ -11,7 +11,7 @@ public class PlayerCharacterInput : MonoBehaviour
     public Vector2 look;
     public bool jump;
     public bool sprint;
-    public bool openInventory;
+    
 
     [Header("Movement Settings")]
     public bool analogMovement;
@@ -19,6 +19,7 @@ public class PlayerCharacterInput : MonoBehaviour
     [Header("Mouse Cursor Settings")]
     public bool cursorLocked = true;
     public bool cursorInputForLook = true;
+
 
     public void OnMove(InputValue value)
     {
@@ -33,11 +34,7 @@ public class PlayerCharacterInput : MonoBehaviour
             LookInput(value.Get<Vector2>());
         }
     }
-    public void OnOpenInventory(InputValue value)
-    {
-        OpenInput(value.isPressed);
-    }
-
+   
     public void OnJump(InputValue value)
     {
         JumpInput(value.isPressed);
@@ -69,13 +66,6 @@ public class PlayerCharacterInput : MonoBehaviour
         sprint = newSprintState;
     }
 
-    public void OpenInput(bool newOpenState)
-    {
-        openInventory = newOpenState;
-    }
-
-    
-    
     private void OnApplicationFocus(bool hasFocus)
     {
         SetCursorState(cursorLocked);
@@ -84,5 +74,6 @@ public class PlayerCharacterInput : MonoBehaviour
     private void SetCursorState(bool newState)
     {
         Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+        
     }
 }

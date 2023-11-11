@@ -1,0 +1,34 @@
+{
+    "name": "InventoryAction",
+    "maps": [
+        {
+            "name": "Inventory",
+            "id": "43470b64-3c87-4cae-a6bc-9cde07e86c60",
+            "actions": [
+                {
+                    "name": "Toggle",
+                    "type": "PassThrough",
+                    "id": "202df0fb-51dc-46d1-b675-0e6e0306bab6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "099c09db-d4a1-4216-b9e6-65a4d456b9a7",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
