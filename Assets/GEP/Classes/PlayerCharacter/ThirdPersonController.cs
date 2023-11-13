@@ -99,6 +99,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private PlayerCharacterInput _input;
         private GameObject _mainCamera;
+        
 
         private const float _threshold = 0.01f;
 
@@ -120,6 +121,9 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+
+            
+
         }
 
         private void Start()
@@ -145,6 +149,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            
         }
 
         private void LateUpdate()
@@ -196,6 +201,8 @@ namespace StarterAssets
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
+
+       
 
         private void Move()
         {

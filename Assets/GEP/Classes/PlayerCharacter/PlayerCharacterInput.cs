@@ -10,6 +10,9 @@ public class PlayerCharacterInput : MonoBehaviour
     public Vector2 look;
     public bool jump;
     public bool sprint;
+    public bool Inventory;
+    public GameObject MainInventoryGroup;
+    
 
     [Header("Movement Settings")]
     public bool analogMovement;
@@ -36,6 +39,11 @@ public class PlayerCharacterInput : MonoBehaviour
         JumpInput(value.isPressed);
     }
 
+    public void OnOpenInventory(InputValue value)
+    {
+        InventoryInput(!MainInventoryGroup.activeSelf);
+    }
+
     public void OnSprint(InputValue value)
     {
         SprintInput(value.isPressed);
@@ -45,6 +53,15 @@ public class PlayerCharacterInput : MonoBehaviour
     {
         move = newMoveDirection;
     }
+
+    public void InventoryInput(bool newInventoryState)
+
+    {
+        MainInventoryGroup.SetActive(newInventoryState);
+        Debug.Log("E is pressed");
+
+    }
+    
 
     public void LookInput(Vector2 newLookDirection)
     {
