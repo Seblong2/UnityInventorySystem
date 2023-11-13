@@ -5069,7 +5069,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UIInputModule
       value: 
-      objectReference: {fileID: 1486937966}
+      objectReference: {fileID: 0}
     - target: {fileID: 8002607922324312474, guid: 4df9a87682b4e6647adb52038cc94cab,
         type: 3}
       propertyPath: m_RootOrder
